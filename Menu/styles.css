@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F1F5F8;
+
+}
+button{
+    text-transform: capitalize;
+}
+.menu-page{
+    margin: 50px auto;
+}
+.underline{
+    margin-right: auto;
+    margin-left: auto;
+    height: 0.2rem;
+    width: 8rem;
+    background-color: chocolate;
+    
+}
+.section-center{
+    width: 90vw;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 50px 20px;
+
+}
+.menu-items{
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    gap: 0 25px;
+    
+}
+.menu-header{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.category-buttons{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    margin: 4em 0;
+}
+.category-buttons button{
+    font-size: 1rem;
+    padding: 5px 10px;
+    background-color: transparent;
+    margin-right: 30px;
+    border: 2px solid chocolate;
+    color: chocolate;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.category-buttons button:hover{
+    transition: 0.7s;
+    background-color: rgb(212, 140, 89);
+    color: white;
+}
+.menu-items img{
+    border: chocolate 3.7px solid ;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-color: chocolate;
+}
+img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.item-header{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 0.5px dotted #617D9E;
+}
+.item-header h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-bottom: 7px;
+}
+.item-price{
+    color: chocolate;
+}
+.item-info{
+    color: #617D9E;
+}
+.item-header>h4, .item-info{
+    text-transform: capitalize;
+}

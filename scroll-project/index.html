@@ -9,20 +9,23 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
-    <nav>
-        <ul class="nav-bar">
-            <li class="nav-items"><a href="#home">Home</a></li>
-            <li class="nav-items"><a href="#about">About</a></li>
-            <li class="nav-items"><a href="#services">Services</a></li>
-            <li class="nav-items"><a href="#tours">Tours</a></li>
-        </ul>
-    </nav>
+    
     <section id="home">
-        <div class="container">
-            <h1>Scroll Project</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas veritatis iusto maxime amet inventore tempore, maiores adipisci aut fugiat consectetur at quas distinctio, numquam modi praesentium hic, quisquam necessitatibus autem.</p>
-            <a class="btn" href="#tours">Explore Tour</a>
-        
+        <nav>
+            <ul class="nav-bar">
+                <li class="nav-items scroll-links"><a href="#home">Home</a></li>
+                <li class="nav-items scroll-links"><a href="#about">About</a></li>
+                <li class="nav-items scroll-links"><a href="#services">Services</a></li>
+                <li class="nav-items scroll-links"><a href="#tours">Tours</a></li>
+            </ul>
+        </nav>
+        <div id="banner">
+            <div class="container">
+                <h1>Scroll Project</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas veritatis iusto maxime amet inventore tempore, maiores adipisci aut fugiat consectetur at quas distinctio, numquam modi praesentium hic, quisquam necessitatibus autem.</p>
+                <a class="btn scroll-links" href="#tours">Explore Tour</a>
+            </div>
+        </div>
     </section>
     <section id="about">
         <h2>About <span class="highligth">Us</span></h1>
@@ -33,8 +36,8 @@
     <section id="tours">
         <h2>Featured <span class="highligth">Tours</span></h2>
     </section>
-    <a href="#home" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a>
-    <footer>Copyright &copy; <span id="daet">2020</span></footer>
+    <a href="#home" class="scroll-to-top scroll-links "><i class="fas fa-arrow-up"></i></a>
+    <footer>Copyright &copy; <span id="date"></span></footer>
     
     <script src="index.js"></script>
 </body>

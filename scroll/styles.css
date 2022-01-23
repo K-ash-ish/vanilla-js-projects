@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+a, li{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+.nav-bar{
+    display: flex;
+    justify-content: right;
+    background-color: white;
+    
+}
+.nav-bar li {
+    font-size: 1.23em;
+    margin: 1em;
+}
+#home{
+    background: url(kristaps-ungurs-780WWXdTo7o-unsplash.jpg);
+    height: 100vh;
+    color: white;
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+.container{
+    width: 40%;
+    display: grid;
+    place-items: center;
+    row-gap: 3em;
+    line-height: 1.5;
+}
+
+.btn{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0.4em 1.6em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#about, #tours, #services{
+    height: 100vh;
+    background-color: #F1F5F8;
+    text-align: center;
+    padding-top: 1em;
+}
+ .highligth{
+    color: #59e1e6;
+}
+#services{
+    background-color: white;
+}
+.scroll-to-top{
+    /* display: none; */
+    color: tomato;
+    border: 2px solid tomato;
+    border-radius: 2em;
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    animation: forwards 2s ease-in-out infinite;
+    visibility: hidden;
+    cursor: pointer;
+    /* z-index: -100; */
+}
+footer{
+    background-color: #203549;
+    color: white;
+    padding: 2em;
+    text-align: center;
+    font-size: 1.2rem;
+}

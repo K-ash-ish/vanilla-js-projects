@@ -19,7 +19,8 @@ const scrollLinks = document.querySelectorAll(".scroll-links");
 scrollLinks.forEach( function(links){
     links.addEventListener('click', function(e){
         e.preventDefault();
-        const id = e.target.getAttribute('href').slice(1);
+        const id = e.currentTarget.getAttribute('href').slice(1);
+        console.log(id)
         const el = document.getElementById(id);
         const navHeight = navBar[0].getBoundingClientRect().height;
 

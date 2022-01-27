@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    /* border: 3px solid gold; */
+    background-color: #f4eef8;
+}
+h1{
+    margin: 1em 0;
+}
+.product-container{
+    /* border: 1px solid green; */
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product{
+    /* border: 1px solid red; */
+    background-color: white;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 2em;
+    border-radius: 1em;
+}
+.product-img{
+    width: 300px;
+}
+:is(.product) :is(img, h2, p, span){
+    /* border: 4px solid black; */
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+.product-desc{
+    color: #a19aa8;
+    width: 90%;
+}
+.star-rating input{
+    display: none;
+}
+.star-rating > label{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    font-family: Verdana;
+    font-size: 30px;
+    color: orange;
+}
+.star-rating label::before{
+    content: '\2606';
+    position: absolute;
+    top: 0px;
+    line-height: 26px;
+}
+
+

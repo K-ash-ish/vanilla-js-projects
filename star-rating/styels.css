@@ -43,22 +43,18 @@ h1{
     color: #a19aa8;
     width: 90%;
 }
-.star-rating input{
-    display: none;
+
+.fas{
+    color: gold;
+    -webkit-text-stroke-color: orange;
+    -webkit-text-stroke-width: 1px;
 }
-.star-rating > label{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    font-family: Verdana;
-    font-size: 30px;
+.far{    
+    -webkit-text-stroke-color: orange;
+    -webkit-text-stroke-width: 1px;
+}
+.user-given{
+    margin-top: 1em;
     color: orange;
 }
-.star-rating label::before{
-    content: '\2606';
-    position: absolute;
-    top: 0px;
-    line-height: 26px;
-}
-
 

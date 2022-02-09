@@ -90,5 +90,11 @@ button{
 }
 
 .button-container > .delete-btn{
-    color: rgb(214, 14, 14);
+    color: rgb(253, 71, 71)
 }
+.clear-all{
+    color: rgb(253, 71, 71);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+

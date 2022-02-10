@@ -1,10 +1,3 @@
-//use classes
-class Item{
-    constructor(item){
-        this.item = item;
-    }
-}
-
 class GroceryList{
     static list  = ["eggs"];
 }

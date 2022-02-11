@@ -1,2 +1,2 @@
-[Live Link](https://groceryitem.netlify.app/)
+<!-- [Live Link](https://groceryitem.netlify.app/) -->
 ## Work in progress...

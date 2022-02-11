@@ -2,33 +2,39 @@ class GroceryList{
     static list  = ["eggs"];
 }
 class ListItem{
-    addItem(){
+
+    static addItem(){
         const add = document.querySelector("#add-items");
         add.addEventListener('click', (e)=>{
             e.preventDefault();
            const groceryItem = document.querySelector("#grocery-items").value;
-           if(this.checkInput(groceryItem)){
+           if(ListItem.checkInput(groceryItem)){
              GroceryList.list.push(groceryItem);
-             this.renderItem(GroceryList.list);
+             ListItem.renderItem(GroceryList.list);
         }
+            ListItem.resetField()
         });
     }
-    renderItem(list){
+    static resetField(){
+        document.querySelector('form').reset();
+    }
+    static renderItem(list){
         const listItem = document.querySelector('.list-items');
         const newItems= list.map((item) =>{
             return`
             <li class="item">
             <p class="items">${item}</p>
             <div class="button-container">
-                <button type="button" class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-                <button type="button" class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+                <i class="fa-solid fa-pen-to-square edit edit-btn"></i>
+                <i class="fa-solid fa-trash-can delete delete-btn"></i>
             </div>
         </li>
             `
         }).join("")
         listItem.innerHTML = newItems;
     }
-    checkInput(item){
+
+    static checkInput(item){
         const banner = document.querySelector('.banner');
         if(item == "" || item == " "){
             banner.textContent = "Please enter a value"
@@ -39,7 +45,6 @@ class ListItem{
             return false;
         }
         else{
-            console.log("asldfkj")
             banner.textContent = "Added successfully"
             banner.classList.add('success-banner-show')
             setTimeout(() => {
@@ -51,12 +56,17 @@ class ListItem{
 }
 //delting all items
 document.querySelector('.clear-all').addEventListener('click', ()=>{
-    console.log(GroceryList.list)
+    GroceryList.list.splice(0)
+    renderList();
 })
+
 function renderList(){
-    const item1 = new ListItem ;
-    item1.renderItem(GroceryList.list)
-    item1.addItem();
+    ListItem.renderItem(GroceryList.list)
+    ListItem.addItem();
+    
 }
 renderList();
+
+
+
 

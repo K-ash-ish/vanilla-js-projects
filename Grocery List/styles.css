@@ -55,9 +55,8 @@ button{
     display: flex;
     justify-content: center;
 }
-
 :is(.grocery-container) :is(form, .list-items){
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 #grocery-items{
     width: 100%;

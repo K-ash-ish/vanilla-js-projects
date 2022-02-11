@@ -1,5 +1,22 @@
 class GroceryList{
-    static list  = ["eggs"];
+    static getItem(){
+        return JSON.parse(localStorage.getItem("items") || "[]");
+    }
+    static addItems(item){
+        const items = GroceryList.getItem();
+        items.push(item);
+        localStorage.setItem("items", JSON.stringify(items));
+    }
+    static removeItem(target){
+        const items = GroceryList.getItem();
+        target = target.trim();
+        items.forEach ((item, index)=>{
+            if(item == target){
+                items.splice(index, 1);
+            }
+        })
+        localStorage.setItem("items", JSON.stringify(items));
+    }
 }
 class ListItem{
 
@@ -9,8 +26,8 @@ class ListItem{
             e.preventDefault();
            const groceryItem = document.querySelector("#grocery-items").value;
            if(ListItem.checkInput(groceryItem)){
-             GroceryList.list.push(groceryItem);
-             ListItem.renderItem(GroceryList.list);
+             GroceryList.addItems(groceryItem);
+             ListItem.renderItem(GroceryList.getItem());
         }
             ListItem.resetField()
         });
@@ -53,20 +70,32 @@ class ListItem{
             return true;
         }
     }
+    static removeItem(target){
+        target.parentElement.parentElement.remove();
+    }
 }
 //delting all items
 document.querySelector('.clear-all').addEventListener('click', ()=>{
     GroceryList.list.splice(0)
     renderList();
 })
+//deleting editing sinlge item
+document.querySelector('.list-items').addEventListener('click', (e)=>{
+    const currentBtn = e.target;
+    if(currentBtn.classList.contains('edit')){
+        
+    }
+    if(currentBtn.classList.contains('delete')){
+        ListItem.removeItem(currentBtn)
+        GroceryList.removeItem(currentBtn.parentElement.parentElement.textContent)
+    }
+})
 
+//rednering list items
 function renderList(){
-    ListItem.renderItem(GroceryList.list)
+    ListItem.renderItem(GroceryList.getItem())
     ListItem.addItem();
     
 }
 renderList();
-
-
-
 

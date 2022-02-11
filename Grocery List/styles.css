@@ -41,6 +41,7 @@ button{
     border-radius: 10px;
     margin: 1em 0;
     color: white;
+    padding: 0.2em 0.2em;
 }
 .error-banner-show{
     display:block;
@@ -96,7 +97,8 @@ button{
     text-transform: capitalize;
 }
 .button-container{
-    width: 10%;
+    cursor: pointer;
+    width: 13%;
     display: flex;
     justify-content:space-between;
 }

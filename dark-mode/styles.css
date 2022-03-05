@@ -3,7 +3,21 @@
     margin:0;
     padding: 0;
 }
+:root{
+    --bg-color: #EEEEEE;
+    --btn-border: rebecapurple;
+}
+/* dark theme color */
+.dark-mode{
+    transition: 1s;
+    --bg-color: #191919;
+    --text-color: #EEEEEE;
+    --btn-border:#EEEEEE;
+}
+
 body{
+    transition: 1s;
+    background-color: var(--bg-color);
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
@@ -17,18 +31,18 @@ h1{
     display: flex;
     margin: 2rem;
     justify-content: space-around;
+    align-items: center;
     font-size: 1.3rem;
 }
-.nav-item{
+.nav-item , .toggle-btn{
     cursor: pointer;
-    color: rebeccapurple;
-    padding: 5px 10px;
-}
-.toggle-btn{
     color: black;
+    padding: 5px 10px;
+    color: var(--text-color);
 }
 
 .container{
+    color: var(--text-color);
     display: grid;
     place-items: center ;
     min-height: 85vh;
@@ -47,9 +61,11 @@ h1{
 .info{
     font-size: 1.1rem;
     max-width: 70%;
+    letter-spacing: 2px;
+    line-height: 1.2;
 }
 .about-btn{
-    color: rebeccapurple;
+    color: var(--btn-border);
     font-weight: 700;
     cursor: pointer;
     background-color: transparent;
@@ -58,9 +74,8 @@ h1{
 }
 .about-btn:hover{
     transition: 1s ;
-    color: black;
-    border-color: rebeccapurple;
-    box-shadow: 5px 5px 20px  gray;
+    color: var(--text-color);
+    box-shadow: 1px 1px 20px  gray;
 }
 :is(.home) :is(p, h1, button){
     margin: 1.5rem 0;
